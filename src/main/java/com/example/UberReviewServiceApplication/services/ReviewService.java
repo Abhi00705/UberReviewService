@@ -17,18 +17,19 @@ public class ReviewService implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception{
         System.out.println("============");
-//        Review r = Review
-//                .builder()
-//                .content("worse ride")
-//                .rating(2.0)
-//                .build();
-//        System.out.println(r);
-//        reviewRepository.save(r);
+        Review r = Review
+                .builder()
+                .content("worse ride")
+                .rating(2.0)
+                .build();
+        System.out.println(r);
+        reviewRepository.save(r);
+        System.out.println(r.getId());
 //        List<Review> data= reviewRepository.findAll();
 //        for(Review data1: data){
 //            System.out.println(data1);
 //        }
-        reviewRepository.deleteById(2L);
+//        reviewRepository.deleteById(2L);
     }
 
 }
