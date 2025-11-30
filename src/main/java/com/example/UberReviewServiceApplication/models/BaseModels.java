@@ -16,7 +16,7 @@ import java.util.Date;
 public abstract class BaseModels {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     protected Long id;
     @Column(nullable=false)
     @Temporal(TemporalType.DATE)

@@ -14,11 +14,10 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Table(name="bookingReview")
 @ToString
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Review extends BaseModels{
-
 
     @Column(nullable=false)
     private String content;

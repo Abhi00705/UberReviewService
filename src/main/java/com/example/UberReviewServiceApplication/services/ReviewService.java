@@ -20,7 +20,7 @@ public class ReviewService implements CommandLineRunner {
         Review r = Review
                 .builder()
                 .content("worse ride")
-                .rating(2.0)
+                .rating(6.0)
                 .build();
         System.out.println(r);
         reviewRepository.save(r);
