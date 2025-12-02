@@ -2,7 +2,6 @@ package com.example.UberReviewServiceApplication.models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.engine.internal.Cascade;
 
 import java.util.Date;
 
@@ -23,14 +22,21 @@ public class Booking extends BaseModels {
     private BookingStatus bookingStatus;
 
     @Column(nullable = true)
-    private Long TotalDistance;
+    private Long totalDistance;
 
     @Temporal(value = TemporalType.TIMESTAMP)
-    private Date StartingTime;
+    private Date startingTime;
 
 
     @Temporal(value = TemporalType.TIMESTAMP)
-    private Date EndTime;
+    private Date endTime;
+
+    @ManyToOne
+    private Passenger passenger;
+
+    @ManyToOne
+    private Driver driver;
+
 
 
 }
